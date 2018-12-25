@@ -1,6 +1,7 @@
-        const express = require('express')
+const express = require('express')
 const app = express()
-const port = 5060
+//const port = 5060
+var port = process.env.PORT || 5060;
 const bodyParser = require('body-parser');
 //var test = require('tape')
 var pdf = require('./')
