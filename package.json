@@ -1,0 +1,51 @@
+{
+  "name": "html-pdf",
+  "version": "2.2.0",
+  "description": "HTML to PDF converter that uses phantomjs",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "html-pdf": "bin/index.js"
+  },
+  "scripts": {
+    "test": "standard && tape test/index.js examples/*/test.js"
+  },
+  "author": "Marc Bachmann",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^12.0.1",
+    "tap-spec": "^2.2.0",
+    "tape": "^4.9.1"
+  },
+  "optionalDependencies": {
+    "phantomjs-prebuilt": "^2.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcbachmann/node-html-pdf.git"
+  },
+  "keywords": [
+    "html",
+    "pdf",
+    "phantom",
+    "phantomjs",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/marcbachmann/node-html-pdf/issues"
+  },
+  "homepage": "https://github.com/marcbachmann/node-html-pdf",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "html": "^1.0.0",
+    "moment": "^2.23.0",
+    "nodemon": "^1.18.9"
+  }
+}
