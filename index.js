@@ -209,7 +209,7 @@ app.post('/PdfDetails', function(req, res) {
 
 			pdf.create(html,options).toFile('./result.pdf',() => {
 			    console.log('pdf done')
-			    res.send({ status: '0k' ,link:'http://localhost:5060/result.pdf'});
+			    res.send({ status: '0k' ,link:'https://leasepdfapi.herokuapp.com/result.pdf'});
 			})
 
 
