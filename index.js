@@ -32,6 +32,12 @@ app.get('/', function(req, res) {
 
 });
 
+app.get('/test', function(req, res) {
+
+	res.send('Hi Lease PDF !!!!!!')
+
+});
+
 
 app.post('/PdfDetails', function(req, res) {
 
