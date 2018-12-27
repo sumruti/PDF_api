@@ -203,7 +203,7 @@ app.post('/PdfDetails', function(req, res) {
 		 
 		  // Papersize Options: http://phantomjs.org/api/webpage/property/paper-size.html
 		  height: "212mm",        // allowed units: mm, cm, in, px
-		  width: "195mm",
+		  width: "230mm",
 		  base: path2
 		}
 
