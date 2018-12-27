@@ -164,66 +164,6 @@
             font-style: normal;
             text-decoration: none
         }
-
-        #fname_0{
-            position: absolute;
-            left: 20.83px;
-            top: 438.71px;
-        }
-
-        #lname_0{
-                position: absolute;
-                left: 345.05px;
-                top: 438.71px;
-        }
-
-         #fname_1{
-            position: absolute;
-            left: 20.83px;
-            top: 468.71px;
-        }
-
-        #lname_1{
-                position: absolute;
-                left: 345.05px;
-                top: 468.71px;
-        }
-
-        #fname_2{
-            position: absolute;
-            left: 20.83px;
-            top: 494.71px;
-        }
-
-        #lname_2{
-                position: absolute;
-                left: 345.05px;
-                top: 494.71px;
-        }
-
-        #fname_4{
-            position: absolute;
-            left: 20.83px;
-            top: 547.71px;
-        }
-
-        #lname_4{
-                position: absolute;
-                left: 345.05px;
-                top: 547.71px;
-        }
-
-        #fname_3{
-            position: absolute;
-            left: 20.83px;
-            top: 522.71px;
-        }
-
-        #lname_3{
-                position: absolute;
-                left: 345.05px;
-                top: 522.71px;
-        }
         
         -->
     </style>
@@ -254,20 +194,8 @@
         <div style="position:absolute;left:20.84px;top:377.78px" class="cls_006"><span class="cls_006">Note:</span></div>
         <div style="position:absolute;left:20.84px;top:392.78px" class="cls_005"><span class="cls_005">See Part B in General Information</span></div>
         <div style="position:absolute;left:20.84px;top:413.25px" class="cls_004"><span class="cls_004">and Tenant(s)</span></div>
-
-
-        <% for(var i=0; i< tenantFname.length; i++) {%>
-
-            <div  class="cls_005"><span class="cls_005" id=<%= "fname_"+ i %> > First Name : <strong><%= tenantFname[i] %> <strong> </span></div>
-
-        <% } %>
-
-          <% for(var i=0; i<tenantLname.length; i++) {%>
-
-             <div  class="cls_005"><span class="cls_005" id=<%= "lname_"+ i %> > Last Name : <strong><%= tenantLname[i] %> </strong></span></div>
-        <% } %>
-
-
+        <div style="position:absolute;left:20.83px;top:431.71px" class="cls_005"><span class="cls_005"> First Name : <strong><%= tenantFname %> <strong> </span></div>
+        <div style="position:absolute;left:345.05px;top:431.71px" class="cls_005"><span class="cls_005"> Last Name : <strong><%= tenantLname %> </strong></span></div>
 
         <div style="position:absolute;left:20.84px;top:573.98px" class="cls_004"><span class="cls_004">2. Rental Unit </span></div>
         <div style="position:absolute;left:20.84px;top:596.33px" class="cls_005"><span class="cls_005">The landlord will rent to the tenant the rental unit at:</span></div>
@@ -362,14 +290,14 @@
         <div style="position:absolute;left:20.84px;top:44.71px" class="cls_005"><span class="cls_005">a)   Rent is to be paid on the</span></div>
         <div style="position:absolute;left:259.14px;top:44.71px" class="cls_005"><span class="cls_005">(e.g., first, second, last) day of each (select one):</span></div>
          <% if(Rent_is_to_paid == '1'){ %>
-            
-            <div style="position:absolute;left:31.45px;top:63.10px" class="cls_005"><input style="margin: 1px 8px;" type="checkbox" name="" checked><span class="cls_005">Month</span></div>
-            <div style="position:absolute;left:31.45px;top:81.48px" class="cls_005"><input style="margin:1px 8px;" type="checkbox" name="" ><span class="cls_005">Other (e.g., weekly)</span></div>
-        <% } else{ %>
-            
-            <div style="position:absolute;left:31.45px;top:63.10px" class="cls_005"><input style="margin: 1px 8px;" type="checkbox" name="" ><span class="cls_005">Month</span></div>
-            <div style="position:absolute;left:31.45px;top:81.48px" class="cls_005"><input style="margin:1px 8px;" type="checkbox" name="" checked><span class="cls_005">Other (e.g., weekly)</span></div>
-        <%}%>
+			
+			<div style="position:absolute;left:31.45px;top:63.10px" class="cls_005"><input style="margin: 1px 8px;" type="checkbox" name="" checked><span class="cls_005">Month</span></div>
+			<div style="position:absolute;left:31.45px;top:81.48px" class="cls_005"><input style="margin:1px 8px;" type="checkbox" name="" ><span class="cls_005">Other (e.g., weekly)</span></div>
+		<% } else{ %>
+			
+			<div style="position:absolute;left:31.45px;top:63.10px" class="cls_005"><input style="margin: 1px 8px;" type="checkbox" name="" ><span class="cls_005">Month</span></div>
+			<div style="position:absolute;left:31.45px;top:81.48px" class="cls_005"><input style="margin:1px 8px;" type="checkbox" name="" checked><span class="cls_005">Other (e.g., weekly)</span></div>
+		<%}%>
         
         <div style="position:absolute;left:20.84px;top:102.70px" class="cls_005"><span class="cls_005">b)   The tenant will pay the following rent:</span></div>
         <div style="position:absolute;left:39.58px;top:120.70px" class="cls_005"><span class="cls_005">Base rent for the rental unit : <strong style="margin: 153px;"><%=Baserent%></strong></span></div>
@@ -410,65 +338,65 @@
         <div style="position:absolute;left:38.84px;top:67.75px" class="cls_005"><span class="cls_005">Gas</span></div>
         
 
-            <% if(Gas == '1'){ %>
-            
-            <div style="position:absolute;right: 233px;top: 68.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 68.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-            <% } else{ %>
-                
-                <div style="position:absolute;right: 233px;top: 68.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-                <div style="position:absolute;right: 193px;top: 68.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-            <%}%>
-        
+			<% if(Gas == '1'){ %>
+			
+			<div style="position:absolute;right: 233px;top: 68.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+			<div style="position:absolute;right: 193px;top: 68.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+			<% } else{ %>
+				
+				<div style="position:absolute;right: 233px;top: 68.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+				<div style="position:absolute;right: 193px;top: 68.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+			<%}%>
+		
         <div style="position:absolute;left:38.84px;top:89.35px" class="cls_005"><span class="cls_005">Air conditioning</span></div>
           <% if(Airconditioning == '1'){ %>
-            <div style="position:absolute;right: 233px;top: 90.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top:90.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+	    	<div style="position:absolute;right: 233px;top: 90.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+			<div style="position:absolute;right: 193px;top:90.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
           <% } else{ %>
           <div style="position:absolute;right: 233px;top: 90.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top:90.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-         <%}%>  
+			<div style="position:absolute;right: 193px;top:90.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+		 <%}%>	
 
         <div style="position:absolute;left:38.84px;top:110.95px" class="cls_005"><span class="cls_005">Additional storage space</span></div>
         <% if(Airconditioning == '1'){ %>
-            <div style="position:absolute;right: 233px;top: 111.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 111.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-            <% } else{ %>
-            <div style="position:absolute;right: 233px;top: 111.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 111.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-            <%}%>   
+        	<div style="position:absolute;right: 233px;top: 111.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+			<div style="position:absolute;right: 193px;top: 111.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+			<% } else{ %>
+			<div style="position:absolute;right: 233px;top: 111.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+			<div style="position:absolute;right: 193px;top: 111.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+			<%}%>	
 
 
 
         <div style="position:absolute;left:38.84px;top:132.55px" class="cls_005"><span class="cls_005">On-Site Laundry</span></div>
-        <% if(OnSiteLaundry == '0'){ %>
-                <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-                    <div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-                <div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-                    <div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+		<% if(OnSiteLaundry == '0'){ %>
+		        <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+					<div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+				<div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+					<div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
 
-               <% } else if(OnSiteLaundry == '1'){ %> 
+		       <% } else if(OnSiteLaundry == '1'){ %> 
 
-                 <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-                    <div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-                <div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-                    <div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+		         <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+					<div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+				<div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+					<div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
 
-               <% } else if(OnSiteLaundry == '2'){ %> 
+		       <% } else if(OnSiteLaundry == '2'){ %> 
 
 
 
-                 <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-                    <div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-                <div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-                    <div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
-            <% } else { %>      
+		         <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+					<div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+				<div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+					<div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+			<% } else { %> 		
 
-                 <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-                    <div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-                <div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-                    <div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
-            <% } %> 
+		         <div style="position:absolute;right: 233px;top: 133.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+					<div style="position:absolute;right: 193px;top: 132.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+				<div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+					<div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+			<% } %> 
 
 
 
@@ -476,41 +404,41 @@
 
         <% if(GuestParking == '0'){ %>
         <div style="position:absolute;right: 233px;top:154.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-        <div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-            <div style="position:absolute;right: 85px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+			<div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+		<div style="position:absolute;right: 154px;top: 133px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+			<div style="position:absolute;right: 85px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
 
        <% } else if(GuestParking == '1'){ %> 
 
          <div style="position:absolute;right: 233px;top: 154.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-        <div style="position:absolute;right: 154px;top: 154.1px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-            <div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+			<div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+		<div style="position:absolute;right: 154px;top: 154.1px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+			<div style="position:absolute;right: 85px;top: 133.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
 
        <% } else if(GuestParking == '2'){ %> 
 
 
 
          <div style="position:absolute;right: 233px;top: 154.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-        <div style="position:absolute;right: 154px;top: 154.1px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-            <div style="position:absolute;right: 85px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
-    <% } else { %>      
+			<div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+		<div style="position:absolute;right: 154px;top: 154.1px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+			<div style="position:absolute;right: 85px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+	<% } else { %> 		
 
          <div style="position:absolute;right: 233px;top: 154.1px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-        <div style="position:absolute;right: 154px;top: 154.1px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
-            <div style="position:absolute;right: 85px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
-    <% } %> 
+			<div style="position:absolute;right: 193px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+		<div style="position:absolute;right: 154px;top: 154.1px;" class="cls_005"><input style="margin: 1px 24px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: -31px;">No Charge</span></div>
+			<div style="position:absolute;right: 85px;top: 154.1px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: -40px;">Pay Per use</span></div>
+	<% } %> 
         <div style="position:absolute;left:38.84px;top:173.81px" class="cls_005"><span class="cls_005">Other</span></div>
 
         <% if(other == '0'){ %>
-            <div style="position:absolute;right: 233px;top: 176px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 176px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-            <% } else{ %>
-            <div style="position:absolute;right: 233px;top: 176px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
-            <div style="position:absolute;right: 193px;top: 176px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
-            <%}%>   
+        	<div style="position:absolute;right: 233px;top: 176px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+			<div style="position:absolute;right: 193px;top: 176px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+			<% } else{ %>
+			<div style="position:absolute;right: 233px;top: 176px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;right: 0;">Yes</span></div>
+			<div style="position:absolute;right: 193px;top: 176px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;right: 0;">No</span></div>
+			<%}%>	
         
         <div style="position:absolute;left:38.84px;top:195.41px" class="cls_005"><span class="cls_005">Other</span></div>
         <div style="position:absolute;left:356.60px;top:197.35px" class="cls_005"><span class="cls_005">Yes</span></div>
@@ -529,30 +457,30 @@
         <div style="position:absolute;left:20.83px;top:425.19px" class="cls_005"><span class="cls_005">Electricity</span></div>
 
         <% if(utilitiesresponsibility == '0'){ %>
-            <div style="position: absolute;right: 0px;top: 425px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 41px;;">Landlord</span></div>
-            <div style="position: absolute;right: 0px;top: 425px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
-            <% } else{ %>
-            <div style="position: absolute;right: 0px;top: 425px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 41px;">Landlord</span></div>
-            <div style="position: absolute;right: 0px;top: 425px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
-        <%}%>
+	    	<div style="position: absolute;right: 0px;top: 425px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 41px;;">Landlord</span></div>
+			<div style="position: absolute;right: 0px;top: 425px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
+			<% } else{ %>
+			<div style="position: absolute;right: 0px;top: 425px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 41px;">Landlord</span></div>
+			<div style="position: absolute;right: 0px;top: 425px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
+		<%}%>
         <div style="position:absolute;left:20.84px;top:446.78px" class="cls_005"><span class="cls_005">Heat</span></div>
         
         <% if(Heat == '0'){ %>
-            <div style="position: absolute;right: 0px;top: 447px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 41px;;">Landlord</span></div>
-            <div style="position: absolute;right: 0px;top: 447px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
-            <% } else{ %>
-            <div style="position: absolute;right: 0px;top: 447px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 41px;">Landlord</span></div>
-            <div style="position: absolute;right: 0px;top: 447px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
-        <%}%>
+	    	<div style="position: absolute;right: 0px;top: 447px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 41px;;">Landlord</span></div>
+			<div style="position: absolute;right: 0px;top: 447px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
+			<% } else{ %>
+			<div style="position: absolute;right: 0px;top: 447px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 41px;">Landlord</span></div>
+			<div style="position: absolute;right: 0px;top: 447px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
+		<%}%>
 
         <div style="position:absolute;left:20.84px;top:468.38px" class="cls_005"><span class="cls_005">Water</span></div>
         <% if(Water == '0'){ %>
-            <div style="position: absolute;right: 0px;top: 468px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 41px;;">Landlord</span></div>
-            <div style="position: absolute;right: 0px;top: 468px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
-            <% } else{ %>
-            <div style="position: absolute;right: 0px;top: 468px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 41px;">Landlord</span></div>
-            <div style="position: absolute;right: 0px;top: 468px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
-        <%}%>
+	    	<div style="position: absolute;right: 0px;top: 468px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 41px;;">Landlord</span></div>
+			<div style="position: absolute;right: 0px;top: 468px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
+			<% } else{ %>
+			<div style="position: absolute;right: 0px;top: 468px;left: 71px;bottom: 0px;" class="cls_005"><input style="margin: 1px 25px;" type="checkbox" name="" ><span class="cls_005" style="position: absolute;left: 41px;">Landlord</span></div>
+			<div style="position: absolute;right: 0px;top: 468px;left: 148px;bottom: 0px;" class="cls_005"><input style="margin:1px 21px;" type="checkbox" name="" checked><span class="cls_005" style="position: absolute;left: 37px;">Tenant</span></div>
+		<%}%>
         <div style="position:absolute;left:20.83px;top:490.64px" class="cls_005"><span class="cls_005">If the tenant is responsible for any utilities, provide details of the arrangement, e.g. tenant sets up account with and pays the</span></div>
         <div style="position:absolute;left:20.83px;top:502.64px" class="cls_005"><span class="cls_005">utility provider, tenant pays a portion of the utility costs (if necessary add additional pages):</span></div>
         <div style="position:absolute;left:20.84px;top:634.62px" class="cls_006"><span class="cls_006">Note:</span></div>
@@ -568,21 +496,21 @@
         <div style="position:absolute;left:20.84px;top:20.99px" class="cls_004"><span class="cls_004">7. Rent Discounts</span></div>
         <div style="position:absolute;left:20.84px;top:43.33px" class="cls_005"><span class="cls_005">Select one:</span></div>
 
-     
+        <div style="position:absolute;left:20.84px;top:468.38px" class="cls_005"><span class="cls_005">Water</span></div>
         <% if(RentDiscounts == '0'){ %>
-              <div style="position:absolute;left:36.11px;top:63.17px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="
-                position:absolute; left: 10px;width: 500px;">There is no rent discount.</span></div>
-                <div style="position:absolute;left:38.84px;top:83.01px" class="cls_005"><span class="cls_005" style="
-                position:absolute; left: 10px;width: 500px;">or</span></div>
-            <div style="position:absolute;left:36.04px;top:102.84px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="
-                position:absolute; left: 10px;width: 500px;">The lawful rent will be discounted as follows:</span></div>
-        <% } else{ %>
-          <div style="position:absolute;left:36.11px;top:63.17px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="
-                position:absolute; left: 10px;width: 500px;">There is no rent discount.</span></div>
-            <div style="position:absolute;left:38.84px;top:83.01px" class="cls_005"><span class="cls_005">or</span></div>
-            <div style="position:absolute;left:36.04px;top:102.84px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="
-                position:absolute; left: 10px;width: 500px;">The lawful rent will be discounted as follows:</span></div>
-        <%}%>
+	    	  <div style="position:absolute;left:36.11px;top:63.17px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="
+		        position:absolute; left: 10px;width: 500px;">There is no rent discount.</span></div>
+		        <div style="position:absolute;left:38.84px;top:83.01px" class="cls_005"><span class="cls_005" style="
+		        position:absolute; left: 10px;width: 500px;">or</span></div>
+	        <div style="position:absolute;left:36.04px;top:102.84px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="
+		        position:absolute; left: 10px;width: 500px;">The lawful rent will be discounted as follows:</span></div>
+		<% } else{ %>
+		  <div style="position:absolute;left:36.11px;top:63.17px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="
+		        position:absolute; left: 10px;width: 500px;">There is no rent discount.</span></div>
+	        <div style="position:absolute;left:38.84px;top:83.01px" class="cls_005"><span class="cls_005">or</span></div>
+	        <div style="position:absolute;left:36.04px;top:102.84px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="
+		        position:absolute; left: 10px;width: 500px;">The lawful rent will be discounted as follows:</span></div>
+		<%}%>
        
         <div style="position:absolute;left:20.83px;top:119.72px" class="cls_005"><span class="cls_005">Provide description of rent discount (if necessary add additional pages):</span></div>
         <div style="position:absolute;left:20.84px;top:267.28px" class="cls_006"><span class="cls_006">Note:</span></div>
@@ -592,16 +520,16 @@
         <div style="position:absolute;left:20.84px;top:335.36px" class="cls_005"><span class="cls_005">Select one:</span></div>
 
         <% if(RentDeposit == '0'){ %>
-             <div style="position:absolute;left:36.11px;top:355.19px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A rent deposit is not required.</span></div>
+	    	 <div style="position:absolute;left:36.11px;top:355.19px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A rent deposit is not required.</span></div>
         <div style="position:absolute;left:38.84px;top:375.03px" class="cls_005"><span class="cls_005">or</span></div>
         <div style="position:absolute;left:36.04px;top:394.18px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">The tenant will pay a rent deposit of $</span></div>
-        <% } else{ %>
-          <div style="position:absolute;left:36.11px;top:355.19px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A rent deposit is not required.</span></div>
+		<% } else{ %>
+		  <div style="position:absolute;left:36.11px;top:355.19px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A rent deposit is not required.</span></div>
         <div style="position:absolute;left:38.84px;top:375.03px" class="cls_005"><span class="cls_005">or</span></div>
         <div style="position:absolute;left:36.04px;top:394.18px" class="cls_005"><input style="margin: 1px -15px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">The tenant will pay a rent deposit of $</span></div>
-        <%}%>
-         
-        
+		<%}%>
+	  	 
+		
 
         <div style="position:absolute;left:301.58px;top:395.25px" class="cls_005"><span class="cls_005">. This can only be applied to the rent for the last rental period</span></div>
         <div style="position:absolute;left:37.44px;top:414.05px" class="cls_005"><span class="cls_005">of the tenancy.</span></div>
@@ -613,14 +541,14 @@
         <div style="position:absolute;left:20.84px;top:526.59px" class="cls_005"><span class="cls_005">Select one:</span></div>
       
        <% if(KeyDeposit == '0'){ %>
-            <div style="position:absolute;left:36.11px;top:546.43px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A key deposit is not required.</span></div>
-            <div style="position:absolute;left:38.84px;top:564.43px" class="cls_005"><span class="cls_005">or</span></div>
-            <div style="position:absolute;left:36.04px;top:581.74px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name=""checked="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">The tenant will pay a refundable key deposit of $</span></div>
-        <% } else{ %>
-            <div style="position:absolute;left:36.11px;top:546.43px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name=""  ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A key deposit is not required.</span></div>
-            <div style="position:absolute;left:38.84px;top:564.43px" class="cls_005"><span class="cls_005">or</span></div>
-            <div style="position:absolute;left:36.04px;top:581.74px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">The tenant will pay a refundable key deposit of $</span></div>
-        <%}%>
+			<div style="position:absolute;left:36.11px;top:546.43px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A key deposit is not required.</span></div>
+			<div style="position:absolute;left:38.84px;top:564.43px" class="cls_005"><span class="cls_005">or</span></div>
+			<div style="position:absolute;left:36.04px;top:581.74px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name=""checked="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">The tenant will pay a refundable key deposit of $</span></div>
+		<% } else{ %>
+			<div style="position:absolute;left:36.11px;top:546.43px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name=""  ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">A key deposit is not required.</span></div>
+			<div style="position:absolute;left:38.84px;top:564.43px" class="cls_005"><span class="cls_005">or</span></div>
+			<div style="position:absolute;left:36.04px;top:581.74px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">The tenant will pay a refundable key deposit of $</span></div>
+		<%}%>
 
        
 
@@ -642,14 +570,14 @@
         <div style="position:absolute;left:20.84px;top:265.01px" class="cls_005"><span class="cls_005">Select one:</span></div>
 
          <% if(Smoking == '0'){ %>
-            <div style="position:absolute;left:36.11px;top:286.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">None</span></div>
-            <div style="position:absolute;left:38.84px;top:304.84px" class="cls_005"><span class="cls_005">or</span></div>
-            <div style="position:absolute;left:36.04px;top:322.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">Smoking rules</span></div>
-        <% } else{ %>
-            <div style="position:absolute;left:36.11px;top:286.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">None</span></div>
-            <div style="position:absolute;left:38.84px;top:304.84px" class="cls_005"><span class="cls_005">or</span></div>
-            <div style="position:absolute;left:36.04px;top:322.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">Smoking rules</span></div>
-        <%}%>
+			<div style="position:absolute;left:36.11px;top:286.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">None</span></div>
+	        <div style="position:absolute;left:38.84px;top:304.84px" class="cls_005"><span class="cls_005">or</span></div>
+	        <div style="position:absolute;left:36.04px;top:322.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">Smoking rules</span></div>
+		<% } else{ %>
+			<div style="position:absolute;left:36.11px;top:286.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">None</span></div>
+	        <div style="position:absolute;left:38.84px;top:304.84px" class="cls_005"><span class="cls_005">or</span></div>
+	        <div style="position:absolute;left:36.04px;top:322.84px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">Smoking rules</span></div>
+		<%}%>
 
         
 
@@ -662,14 +590,14 @@
         <div style="position:absolute;left:20.84px;top:570.35px" class="cls_005"><span class="cls_005">Select one:</span></div>
 
         <% if(TenantInsurance == '0'){ %>
-             <div style="position:absolute;left:36.72px;top:590.19px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">There are no tenant insurance requirements.</span></div>
+			 <div style="position:absolute;left:36.72px;top:590.19px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">There are no tenant insurance requirements.</span></div>
         <div style="position:absolute;left:38.84px;top:608.19px" class="cls_005"><span class="cls_005">or</span></div>
         <div style="position:absolute;left:35.81px;top:625.03px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">The tenant must have liability insurance at all times. If the landlord asks for proof of coverage, the tenant must provide it.</span></div>
-        <% } else{ %>
-             <div style="position:absolute;left:36.72px;top:590.19px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">There are no tenant insurance requirements.</span></div>
+		<% } else{ %>
+			 <div style="position:absolute;left:36.72px;top:590.19px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 500px;">There are no tenant insurance requirements.</span></div>
         <div style="position:absolute;left:38.84px;top:608.19px" class="cls_005"><span class="cls_005">or</span></div>
         <div style="position:absolute;left:35.81px;top:625.03px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">The tenant must have liability insurance at all times. If the landlord asks for proof of coverage, the tenant must provide it.</span></div>
-        <%}%>
+		<%}%>
 
 
        
@@ -719,16 +647,16 @@
 
 
           <% if(AdditionalTerms == '0'){ %>
-               <div style="position:absolute;left:36.11px;top:564.69px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">There are no additional terms.</span></div>
+			   <div style="position:absolute;left:36.11px;top:564.69px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">There are no additional terms.</span></div>
         <div style="position:absolute;left:38.84px;top:584.53px" class="cls_005"><span class="cls_005">or</span></div>
         <div style="position:absolute;left:36.11px;top:606.91px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">This tenancy agreement includes an attachment with additional terms that the landlord and tenant agreed to.</span></div
 >
-        <% } else{ %>
-                <div style="position:absolute;left:36.11px;top:564.69px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">There are no additional terms.</span></div>
+		<% } else{ %>
+			    <div style="position:absolute;left:36.11px;top:564.69px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" ><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">There are no additional terms.</span></div>
         <div style="position:absolute;left:38.84px;top:584.53px" class="cls_005"><span class="cls_005">or</span></div>
         <div style="position:absolute;left:36.11px;top:606.91px" class="cls_005"><input style="margin: 1px -16px;" type="checkbox" name="" checked><span class="cls_005" style="position:absolute; left: 6px;width: 1000px;">This tenancy agreement includes an attachment with additional terms that the landlord and tenant agreed to.</span></div
 >
-        <%}%>
+		<%}%>
 
      
 
