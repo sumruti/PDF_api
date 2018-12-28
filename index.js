@@ -43,10 +43,10 @@ app.get('/test', function(req, res) {
 app.post('/PdfDetails', function(req, res) {
 
 
-		var LandlordName =req.body.LandlordName ;
+		var LandlordName =(req.body.LandlordName ? req.body.LandlordName : '');
 
-		var tenantFname = req.body.tenantFname  ;
-		var tenantLname = req.body.tenantLname;
+		var tenantFname = (req.body.tenantFname ? req.body.tenantFname :'')  ;
+		var tenantLname = (req.body.tenantLname ? req.body.tenantLname : '');
 		var RentalUnitName = req.body.RentalUnitName;
 		var StreetName = req.body.StreetName;
 		var StreetNumber = req.body.StreetNumber;
@@ -78,11 +78,10 @@ app.post('/PdfDetails', function(req, res) {
 		var RentDiscounts = req.body.RentDiscounts;
 
 
-		var tenancystartson = moment(req.body.tenancystartson).format('YYYY/MM/DD');
-		var tenancyendingon = moment(req.body.tenancyendingon).format('YYYY/MM/DD');
+		var tenancystartson = (req.body.tenancystartson ? moment(req.body.tenancystartson).format('YYYY/MM/DD') : '');
+		var tenancyendingon = (req.body.tenancyendingon ? moment(req.body.tenancyendingon).format('YYYY/MM/DD') : '');
 		var Amonthlytenancy = req.body.Amonthlytenancy;
 		var Othertenanc = req.body.Othertenanc;
-
 
 		var Rent_is_to_paid = req.body.Rent_is_to_paid;
 		var Baserent = req.body.Baserent;
@@ -92,9 +91,9 @@ app.post('/PdfDetails', function(req, res) {
 		var Rentispayableto = req.body.Rentispayableto;
 		var landlordSAdministration = req.body.landlordSAdministration;
 		var partialrentofprice = req.body.partialrentofprice;
-		var TheTenantWillPayPartialRentof = moment(req.body.TheTenantWillPayPartialRentof).format('YYYY/MM/DD');
-		var ThisPartialRentCoversFrom = moment(req.body.ThisPartialRentCoversFrom).format('YYYY/MM/DD');
-		var ThisPartialRentCoversto = moment(req.body.ThisPartialRentCoversto).format('YYYY/MM/DD');
+		var TheTenantWillPayPartialRentof = (req.body.TheTenantWillPayPartialRentof ? moment(req.body.TheTenantWillPayPartialRentof).format('YYYY/MM/DD') : '');
+		var ThisPartialRentCoversFrom = (req.body.ThisPartialRentCoversFrom ? moment(req.body.ThisPartialRentCoversFrom).format('YYYY/MM/DD') : '');
+		var ThisPartialRentCoversto = (req.body.ThisPartialRentCoversto ? moment(req.body.ThisPartialRentCoversto).format('YYYY/MM/DD') : '' );
 
 		var Gas = req.body.Gas;
 		var Airconditioning = req.body.Airconditioning;
@@ -115,10 +114,13 @@ app.post('/PdfDetails', function(req, res) {
 
 		var LandlordNameSigningAgreement = req.body.LandlordNameSigningAgreement;
 		var LandlordSignature = req.body.LandlordSignature;
-		var LandlordAgreementDate = moment(req.body.LandlordAgreementDate).format('YYYY/MM/DD');
+		var LandlordAgreementDate = (req.body.LandlordAgreementDate ? moment(req.body.LandlordAgreementDate).format('YYYY/MM/DD'):'');
 		var TenantAgreementName = req.body.TenantAgreementName;
 		var TenantAgreementSignature = req.body.TenantAgreementSignature;
-		var TenantAgreementDate = moment(req.body.TenantAgreementDate).format('YYYY/MM/DD');
+		var TenantAgreementDate = (req.body.TenantAgreementDate ? moment(req.body.TenantAgreementDate).format('YYYY/MM/DD') : '');
+
+
+
 
 
 
