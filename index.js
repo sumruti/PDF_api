@@ -204,8 +204,8 @@ app.post('/PdfDetails', function(req, res) {
 		    // The directory the file gets written into if not using .toFile(filename, callback). default: '/tmp'
 		 
 		  // Papersize Options: http://phantomjs.org/api/webpage/property/paper-size.html
-		  height: "11000",        // allowed units: mm, cm, in, px
-		  width: "205mm",
+		  height: "11300",        // allowed units: mm, cm, in, px
+		  width: "215mm",
 		  base: path2
 		}
 
